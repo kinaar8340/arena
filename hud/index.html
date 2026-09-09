@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARENA</title>
+  <link rel="stylesheet" href="/hud.css">
+</head>
+<body>
+  <div id="app">
+    <header id="top">
+      <span class="mark">ARENA</span>
+      <span class="rule"></span>
+      <span class="theory">shadow-as-theory</span>
+      <span class="rule"></span>
+      <span class="warn">WARNING COGNITIVE DISSONANCE AHEAD</span>
+    </header>
+
+    <main id="main">
+      <section id="ranks" aria-label="ranks">
+        <h2>ranks</h2>
+        <ol id="rank-stack"></ol>
+      </section>
+
+      <section id="venn-panel" aria-label="life catalog">
+        <svg id="venn" viewBox="0 0 100 72" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="leak-hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="4" stroke="#c4a35a" stroke-width="0.7"/>
+            </pattern>
+            <mask id="remainder-mask">
+              <rect x="0" y="0" width="100" height="72" fill="black"/>
+              <circle id="mask-life" cx="34" cy="36" r="26" fill="white"/>
+              <circle id="mask-catalog" cx="66" cy="36" r="26" fill="black"/>
+            </mask>
+          </defs>
+          <g id="frame-ticks" class="ticks"></g>
+          <circle id="life-circle" class="rim" cx="34" cy="36" r="26"/>
+          <g id="catalog-g">
+            <circle id="catalog-circle" class="rim" cx="66" cy="36" r="26"/>
+            <circle id="pointer-ring" cx="66" cy="36" r="12"/>
+            <line id="pointer-scar" x1="58" y1="36" x2="74" y2="36"/>
+          </g>
+          <rect id="leak-fill" x="0" y="0" width="100" height="72" fill="url(#leak-hatch)" mask="url(#remainder-mask)"/>
+          <text id="life-label" x="18" y="10">life</text>
+          <text id="catalog-label" x="82" y="10">catalog</text>
+          <text id="overlap-label" x="50" y="35">picture inside</text>
+          <text id="overlap-label-2" x="50" y="41">the outline</text>
+        </svg>
+        <p id="reject-line"></p>
+      </section>
+
+      <section id="gauges" aria-label="alignment">
+        <h2>Alignment A</h2>
+        <div id="gauge-row">
+          <div class="gauge" data-k="t"><span class="g-name">t</span><svg viewBox="0 0 24 100"></svg><span class="g-val"></span></div>
+          <div class="gauge" data-k="c"><span class="g-name">c</span><svg viewBox="0 0 24 100"></svg><span class="g-val"></span></div>
+          <div class="gauge" data-k="leak"><span class="g-name">ℓ</span><svg viewBox="0 0 24 100"></svg><span class="g-val"></span></div>
+          <div class="gauge" data-k="p"><span class="g-name">p</span><svg viewBox="0 0 24 100"></svg><span class="g-val"></span></div>
+        </div>
+        <div id="residual">
+          <span class="k">residual</span>
+          <span id="res-dt"></span>
+          <span id="res-dc"></span>
+          <span id="res-dleak"></span>
+          <span id="res-dp"></span>
+        </div>
+        <p id="fault-class"></p>
+      </section>
+    </main>
+
+    <nav id="controls">
+      <div class="clk">
+        <span class="k">clk</span>
+        <span id="tick-read">0000</span>
+      </div>
+      <button type="button" id="btn-tick" data-act="tick">TICK</button>
+      <button type="button" id="btn-correct" data-act="correct">CORRECT</button>
+      <button type="button" id="btn-hold" data-act="hold">HOLD</button>
+      <span class="rule"></span>
+      <button type="button" class="inj" data-inject="clock_drift">clock drift</button>
+      <button type="button" class="inj" data-inject="denied_leak">denied leak</button>
+      <button type="button" class="inj" data-inject="frozen_pointer">frozen pointer</button>
+      <button type="button" class="inj" data-inject="r4_split">R4 split</button>
+      <button type="button" id="btn-reset" data-act="reset">RESET</button>
+      <span class="rule"></span>
+      <span id="lamp">CORRECTING</span>
+    </nav>
+
+    <footer id="footer">Without correction, adaptation takes control.</footer>
+  </div>
+  <script src="/hud.js"></script>
+</body>
+</html>

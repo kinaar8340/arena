@@ -1,0 +1,44 @@
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,fit,shapes.geometric,arrows.meta}
+\usepackage{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+
+\theoremstyle{remark}
+\newtheorem*{spinefact}{Spine fact}
+
+\newtheoremstyle{modelclaim}
+  {6pt plus 2pt minus 2pt}
+  {6pt plus 2pt minus 2pt}
+  {\normalfont}
+  {}
+  {\itshape}
+  {.}
+  {\newline}
+  {\thmname{#1}\thmnote{ (#3)}}
+\theoremstyle{modelclaim}
+\newtheorem*{model}{Model}
+
+% Upright O,C so Q_O cannot be read as Q\circ
+\newcommand{\QO}{Q_{\mathrm{O}}}
+\newcommand{\QC}{Q_{\mathrm{C}}}
+\newcommand{\XO}{X_{\mathrm{O}}}
+\newcommand{\sigZ}{\sigma(Z)}
+\newcommand{\pPsi}{p(\Psi,t)}
+\newcommand{\pq}{p(q,t)}
+\newcommand{\Op}{O[\Psi]}
+\newcommand{\piO}{\pi_{\mathrm{O}}}

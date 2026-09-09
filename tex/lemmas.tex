@@ -1,0 +1,68 @@
+\section{Cheap lemmas}
+\label{sec:lemmas}
+
+These two lemmas are internal to the Model.
+The Hopf remainder is a spine fact, not a lemma about \(Q\).
+
+\begin{lem}[Mass]
+\label{lem:mass}
+Under the standing hypotheses,
+\[
+\int \QO\,p\,d\Psi = 0,
+\qquad
+\int \QC\,p\,d\Psi = 0,
+\qquad
+\int Qp\,d\Psi = 0.
+\]
+\end{lem}
+
+\begin{proof}
+By definition \(\QO\,p=-\nabla\cdot(\Op\,p)\).
+The divergence theorem (no flux at infinity) gives
+\(\int\nabla\cdot(\Op\,p)\,d\Psi=0\), hence \(\int \QO\,p\,d\Psi=0\).
+For the kernel, Fubini and the change of names \((\Psi,\Psi')\mapsto(\Psi',\Psi)\)
+cancel the two terms of~\eqref{eq:formal-QC}, hence \(\int \QC\,p\,d\Psi=0\).
+Because \(Z\) is coarse, \(\sigma(Z)\) is a parameter of the fast operator, so
+\(\int\sigma(Z)\,\QC\,p\,d\Psi=\sigma(Z)\int \QC\,p\,d\Psi=0\).
+The third claim is the sum.
+\end{proof}
+
+\begin{lem}[Markov]
+\label{lem:markov}
+Under the standing hypotheses, \(Q^{\ast}1=0\).
+The jump piece \(\sigma(Z)\,\QC\) is a Kolmogorov forward operator:
+\(w\ge 0\) and \(\sigma(Z)\ge 0\).
+Mass preservation is Lemma~\ref{lem:mass}.
+Existence of the semigroup is not claimed.
+\end{lem}
+
+\begin{proof}
+Lemma~\ref{lem:mass} says \(\int Qp\,d\Psi=0\) for every density \(p\),
+which is the dual condition \(Q^{\ast}1=0\).
+The kernel \(w\ge 0\) makes \(\QC\) the forward operator of a jump process;
+\(\sigma(Z)\ge 0\) scales that operator and does not flip its sign.
+The vector-field piece is Liouville transport.
+The sum is with \(+\) (never an extra minus on \(\QC\)).
+No third lobe.
+\end{proof}
+
+\begin{spinefact}[Hopf remainder]
+\label{sf:hopf}
+Spine input, not a lemma about \(Q\), not proved here:
+\(h:S^{3}\to S^{2}\) is a locally trivial \(S^{1}\)-bundle and is not
+globally trivial.
+Any catalog observable that factors through \(h\) cannot invert the fiber
+coordinate.
+Locally, on a trivialization \(U\times S^{1}\), the two generators of the
+Model may share the bundle metric.
+Globally they do not coincide, and the catalog cannot prove it has captured
+the life.
+\end{spinefact}
+
+Local triviality of \(h\) is the local metric agreement.
+Equivalently, \(h\) has no global section:
+the fiber \(S^{1}\) is the life the base does not see
+(\(\pi_{1}(S^{3})=0\) while \(\pi_{1}(S^{2}\times S^{1})\cong\mathbb{Z}\)
+already forbids a product).
+The Model uses that fact as input; it does not become a number-theory theorem
+by being written next to Hopf.

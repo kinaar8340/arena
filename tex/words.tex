@@ -1,0 +1,49 @@
+\section{Four words, operationally}
+\label{sec:words}
+
+Four loaded words. Each is a map or a functional of the density \(p\),
+not a metaphor.
+
+\paragraph{Life.}
+Continuous transport.
+\[
+\QO\,p
+:= -\nabla\cdot(\Op\,p)
+\qquad\text{or, on \(S^{3}\),}\qquad
+\QO\,p
+:= -\operatorname{div}_{S^{3}}(\XO\,p).
+\]
+\(\sigma=0\) is pure life: \(\partial p/\partial t = \QO\,p\).
+
+\paragraph{Catalog.}
+Jump kernel, already written as gain minus loss.
+\[
+\QC\,p
+:= \int\bigl[w(\Psi\mid\Psi')p(\Psi')
+      -w(\Psi'\mid\Psi)p(\Psi)\bigr]\,d\Psi'
+\]
+or the lattice sum on \(\Lambda\).
+No extra minus is placed on this lobe.
+
+\paragraph{Correction.}
+A map from an error signal into the gate or the kernel.
+Write \(e = A[p]-A^{\ast}\).
+Correction is a (possibly set-valued) map
+\[
+C:\ (p,e)\ \mapsto\ \bigl(\sigma',\,w'\bigr)
+\]
+that changes \(\sigma(Z)\) or \(w\), and nothing else.
+If \(C\) is absent, \(\sigma\) is an exogenous schedule.
+Protocol~S1 does not use \(C\).
+
+\paragraph{Alignment.}
+A stated functional \(A[p]\in\mathbb{R}\) of the density.
+Correction is defined only relative to a named \(A\).
+This note does not promote a unique \(A\);
+a protocol run must name one before it reports.
+Life-drift \(D(\sigma,t)=\mathrm{KL}(p_{t}^{\sigma}\Vert p_{t}^{0})\)
+is a different functional; it is not \(A\).
+
+The lens of the Venn is \(\partial p/\partial t\), never a third operator.
+The slogan ``the catalog cannot prove it captured the life''
+is Lemmas~\ref{lem:mass}--\ref{lem:markov} and the Spine fact (Hopf remainder).
