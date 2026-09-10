@@ -1,5 +1,10 @@
 # Arena
 
+Spine: [`qga`](https://github.com/kinaar8340/qga) — manuscript + pedagogical Python  
+Shared math: [`flux_hopf_lib`](https://github.com/kinaar8340/flux_hopf_lib)  
+Engine: [`qga_engine`](https://github.com/kinaar8340/qga_engine) · [`qga_gpu`](https://github.com/kinaar8340/qga_gpu)  
+This repo: labeled dynamics Model + HUD. Not theorems. Do not grow a second book.
+
 Companion note to QGA, plus a playable HUD demo.
 
 Catalog needs the life. The life is not the catalog.
@@ -74,3 +79,7 @@ python3 -m arena.server
 Open http://127.0.0.1:8765
 
 `pytest` is the only extra: `pip install pytest` or `pip install -e ".[dev]"`.
+
+The HUD prints claim labels. The mix is **Model**. Runtime import of `toe` / `hfb` / `mystery` is refused.
+
+Geometry libraries are MIT. Several VQC repos are PolyForm Noncommercial plus patent notice US 63/913,110. This repo is MIT.
